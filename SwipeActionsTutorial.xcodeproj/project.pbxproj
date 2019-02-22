@@ -10,9 +10,12 @@
 		23017795221F960C0073EC00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23017794221F960C0073EC00 /* AppDelegate.swift */; };
 		23017797221F960C0073EC00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23017796221F960C0073EC00 /* ViewController.swift */; };
 		2301779A221F960C0073EC00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23017798221F960C0073EC00 /* Main.storyboard */; };
-		2301779D221F960C0073EC00 /* SwipeActionsTutorial.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2301779B221F960C0073EC00 /* SwipeActionsTutorial.xcdatamodeld */; };
 		2301779F221F960D0073EC00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2301779E221F960D0073EC00 /* Assets.xcassets */; };
 		230177A2221F960D0073EC00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 230177A0221F960D0073EC00 /* LaunchScreen.storyboard */; };
+		230177AE221F97530073EC00 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230177AD221F97530073EC00 /* Extensions.swift */; };
+		230177B0221F97610073EC00 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230177AF221F97610073EC00 /* User.swift */; };
+		230177B2221F97840073EC00 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230177B1221F97840073EC00 /* MessageCell.swift */; };
+		230177B4221F97AC0073EC00 /* MessagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230177B3221F97AC0073EC00 /* MessagesController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +23,13 @@
 		23017794221F960C0073EC00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23017796221F960C0073EC00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		23017799221F960C0073EC00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2301779C221F960C0073EC00 /* SwipeActionsTutorial.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwipeActionsTutorial.xcdatamodel; sourceTree = "<group>"; };
 		2301779E221F960D0073EC00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		230177A1221F960D0073EC00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		230177A3221F960D0073EC00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		230177AD221F97530073EC00 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		230177AF221F97610073EC00 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		230177B1221F97840073EC00 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		230177B3221F97AC0073EC00 /* MessagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,50 @@
 		23017793221F960C0073EC00 /* SwipeActionsTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				230177AC221F961B0073EC00 /* Utils */,
+				230177AB221F96190073EC00 /* Model */,
+				230177AA221F96180073EC00 /* View */,
+				230177A9221F96150073EC00 /* Controller */,
 				23017794221F960C0073EC00 /* AppDelegate.swift */,
 				23017796221F960C0073EC00 /* ViewController.swift */,
 				23017798221F960C0073EC00 /* Main.storyboard */,
 				2301779E221F960D0073EC00 /* Assets.xcassets */,
 				230177A0221F960D0073EC00 /* LaunchScreen.storyboard */,
 				230177A3221F960D0073EC00 /* Info.plist */,
-				2301779B221F960C0073EC00 /* SwipeActionsTutorial.xcdatamodeld */,
 			);
 			path = SwipeActionsTutorial;
+			sourceTree = "<group>";
+		};
+		230177A9221F96150073EC00 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				230177B3221F97AC0073EC00 /* MessagesController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		230177AA221F96180073EC00 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				230177B1221F97840073EC00 /* MessageCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		230177AB221F96190073EC00 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				230177AF221F97610073EC00 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		230177AC221F961B0073EC00 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				230177AD221F97530073EC00 /* Extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +180,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				23017797221F960C0073EC00 /* ViewController.swift in Sources */,
-				2301779D221F960C0073EC00 /* SwipeActionsTutorial.xcdatamodeld in Sources */,
 				23017795221F960C0073EC00 /* AppDelegate.swift in Sources */,
+				230177B4221F97AC0073EC00 /* MessagesController.swift in Sources */,
+				230177B0221F97610073EC00 /* User.swift in Sources */,
+				230177AE221F97530073EC00 /* Extensions.swift in Sources */,
+				230177B2221F97840073EC00 /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,19 +382,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		2301779B221F960C0073EC00 /* SwipeActionsTutorial.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				2301779C221F960C0073EC00 /* SwipeActionsTutorial.xcdatamodel */,
-			);
-			currentVersion = 2301779C221F960C0073EC00 /* SwipeActionsTutorial.xcdatamodel */;
-			path = SwipeActionsTutorial.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 23017789221F960C0073EC00 /* Project object */;
 }
