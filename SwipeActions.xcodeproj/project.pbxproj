@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		2332C678221CF90D0067A0F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2332C677221CF90D0067A0F9 /* AppDelegate.swift */; };
-		2332C67A221CF90D0067A0F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2332C679221CF90D0067A0F9 /* ViewController.swift */; };
+		2332C67A221CF90D0067A0F9 /* MessagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2332C679221CF90D0067A0F9 /* MessagesController.swift */; };
 		2332C67D221CF90D0067A0F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2332C67B221CF90D0067A0F9 /* Main.storyboard */; };
-		2332C680221CF90D0067A0F9 /* SwipeActions.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2332C67E221CF90D0067A0F9 /* SwipeActions.xcdatamodeld */; };
 		2332C682221CF90F0067A0F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2332C681221CF90F0067A0F9 /* Assets.xcassets */; };
 		2332C685221CF90F0067A0F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2332C683221CF90F0067A0F9 /* LaunchScreen.storyboard */; };
+		2332C68D221CF9640067A0F9 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2332C68C221CF9630067A0F9 /* MessageCell.swift */; };
+		2332C692221CF9F30067A0F9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2332C691221CF9F30067A0F9 /* User.swift */; };
+		2332C695221CFC4E0067A0F9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2332C694221CFC4E0067A0F9 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2332C674221CF90D0067A0F9 /* SwipeActions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeActions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2332C677221CF90D0067A0F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2332C679221CF90D0067A0F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2332C679221CF90D0067A0F9 /* MessagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesController.swift; sourceTree = "<group>"; };
 		2332C67C221CF90D0067A0F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2332C67F221CF90D0067A0F9 /* SwipeActions.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwipeActions.xcdatamodel; sourceTree = "<group>"; };
 		2332C681221CF90F0067A0F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2332C684221CF90F0067A0F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2332C686221CF90F0067A0F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2332C68C221CF9630067A0F9 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		2332C691221CF9F30067A0F9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2332C694221CFC4E0067A0F9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,49 @@
 		2332C676221CF90D0067A0F9 /* SwipeActions */ = {
 			isa = PBXGroup;
 			children = (
+				2332C693221CFC450067A0F9 /* Utils */,
+				2332C690221CF9D10067A0F9 /* Model */,
+				2332C68F221CF9D00067A0F9 /* View */,
+				2332C68E221CF9CF0067A0F9 /* Controller */,
 				2332C677221CF90D0067A0F9 /* AppDelegate.swift */,
-				2332C679221CF90D0067A0F9 /* ViewController.swift */,
 				2332C67B221CF90D0067A0F9 /* Main.storyboard */,
 				2332C681221CF90F0067A0F9 /* Assets.xcassets */,
 				2332C683221CF90F0067A0F9 /* LaunchScreen.storyboard */,
 				2332C686221CF90F0067A0F9 /* Info.plist */,
-				2332C67E221CF90D0067A0F9 /* SwipeActions.xcdatamodeld */,
 			);
 			path = SwipeActions;
+			sourceTree = "<group>";
+		};
+		2332C68E221CF9CF0067A0F9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2332C679221CF90D0067A0F9 /* MessagesController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2332C68F221CF9D00067A0F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2332C68C221CF9630067A0F9 /* MessageCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2332C690221CF9D10067A0F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2332C691221CF9F30067A0F9 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2332C693221CFC450067A0F9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2332C694221CFC4E0067A0F9 /* Extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +176,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2332C67A221CF90D0067A0F9 /* ViewController.swift in Sources */,
+				2332C695221CFC4E0067A0F9 /* Extensions.swift in Sources */,
+				2332C67A221CF90D0067A0F9 /* MessagesController.swift in Sources */,
+				2332C68D221CF9640067A0F9 /* MessageCell.swift in Sources */,
+				2332C692221CF9F30067A0F9 /* User.swift in Sources */,
 				2332C678221CF90D0067A0F9 /* AppDelegate.swift in Sources */,
-				2332C680221CF90D0067A0F9 /* SwipeActions.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,19 +378,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		2332C67E221CF90D0067A0F9 /* SwipeActions.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				2332C67F221CF90D0067A0F9 /* SwipeActions.xcdatamodel */,
-			);
-			currentVersion = 2332C67F221CF90D0067A0F9 /* SwipeActions.xcdatamodel */;
-			path = SwipeActions.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 2332C66C221CF90D0067A0F9 /* Project object */;
 }
